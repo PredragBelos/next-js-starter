@@ -1,0 +1,54 @@
+@use "sass:list";
+
+// Function for creating file extension
+@function check-file-format($font-format) {
+    $font-for: "";
+    @if $font-format == "truetype" {
+        $font-for: "ttf";
+    } @else {
+        $font-for: $font-format;
+    }
+
+    @return $font-for;
+}
+
+// Function for creating file name for font source
+@function create-font-file-name($font-weight, $font-family, $font-format) {
+    $file-name: "";
+
+    @if $font-weight == 400 {
+        $file-name: $font-family + "-Regular." + check-file-format($font-format);
+    } @else if $font-weight == 500 {
+        $file-name: $font-family + "-Medium." + check-file-format($font-format);
+    } @else if $font-weight == 600 {
+        $file-name: $font-family + "-SemiBold." + check-file-format($font-format);
+    } @else if $font-weight == 700 {
+        $file-name: $font-family + "-Bold." + check-file-format($font-format);
+    }
+    @return $file-name;
+}
+
+// Function for creating font source
+@function create-font-source($font-formats, $font-weight, $font-family) {
+    $formats: ();
+    @each $font-format in $font-formats {
+        $formats: list.append(
+            $formats,
+            url($fonts-src + create-font-file-name($font-weight, $font-family, $font-format)) format($font-format),
+            "comma"
+        );
+    }
+    @return $formats;
+}
+
+// Loop for creating @font-face for all fonts
+@each $font-family in $fonts-familys {
+    @each $font-weight in $font-weights {
+        @font-face {
+            font-family: $font-family;
+            src: create-font-source($font-formats, $font-weight, $font-family);
+            font-weight: $font-weight;
+            font-style: normal;
+        }
+    }
+}

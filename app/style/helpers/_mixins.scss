@@ -1,0 +1,175 @@
+// Mixin for breakpoints
+@mixin breakpoint($value) {
+    @if $value == "phone" {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    } @else if $value == "phone+" {
+        @media only screen and (max-width: 576px) {
+            @content;
+        }
+    } @else if $value == "tablet" {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    } @else if $value == "tablet+" {
+        @media only screen and (max-width: 992px) {
+            @content;
+        }
+    } @else if $value == "laptop" {
+        @media only screen and (max-width: 1024px) {
+            @content;
+        }
+    } @else if $value == "desktop" {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+    } @else if $value == "desktop+" {
+        @media only screen and (max-width: 1400px) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: 0px) and (max-width: $value) {
+            @content;
+        }
+    }
+}
+
+// Special media creen
+@mixin breakpoint-spec($min-width, $max-width) {
+    @media only screen and (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }
+}
+
+// Hover style
+@mixin hover {
+    @media only screen and (min-width: 1024px) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+// Flex display
+@mixin flex-structure($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+// Mixin for generateing headings styles
+@mixin generate-heading-styles($level, $styles) {
+    #{$level},
+    .#{$level} {
+        margin-bottom: nth($styles, 5);
+        font-size: nth($styles, 2);
+        font-family: $heading-font;
+        font-weight: $bold;
+        line-height: nth($styles, 10);
+        color: nth($styles, 1);
+        @include breakpoint($desktop) {
+            margin-bottom: nth($styles, 7);
+            font-size: nth($styles, 3);
+            line-height: nth($styles, 11);
+        }
+        @include breakpoint($tablet) {
+            margin-bottom: nth($styles, 8);
+            font-size: nth($styles, 4);
+            line-height: nth($styles, 12);
+        }
+        @include breakpoint($phone) {
+            margin-bottom: nth($styles, 9);
+            font-size: nth($styles, 5);
+            line-height: nth($styles, 13);
+        }
+    }
+}
+
+// Mixin for generateing paragraph style
+@mixin generate-paragraph-styles {
+    p {
+        margin-bottom: nth($paragraph-margins-bottom, 1);
+        font-size: nth($paragraph-font-sizes, 1);
+        font-family: $body-font;
+        font-weight: $regular;
+        line-height: nth($paragraph-line-height, 1);
+        color: $body-text-color;
+        @include breakpoint($desktop) {
+            margin-bottom: nth($paragraph-margins-bottom, 2);
+            font-size: nth($paragraph-font-sizes, 2);
+            line-height: nth($paragraph-line-height, 2);
+        }
+        @include breakpoint($tablet) {
+            margin-bottom: nth($paragraph-margins-bottom, 3);
+            font-size: nth($paragraph-font-sizes, 3);
+            line-height: nth($paragraph-line-height, 3);
+        }
+        @include breakpoint($phone) {
+            margin-bottom: nth($paragraph-margins-bottom, 4);
+            font-size: nth($paragraph-font-sizes, 4);
+            line-height: nth($paragraph-line-height, 4);
+        }
+    }
+}
+
+// Mixin for generateing span style
+@mixin generate-span-styles {
+    span {
+        margin-bottom: nth($span-margins-bottom, 1);
+        font-size: nth($span-font-sizes, 1);
+        font-family: $body-font;
+        font-weight: $regular;
+        line-height: nth($span-line-height, 1);
+        color: $body-text-color;
+        @include breakpoint($desktop) {
+            margin-bottom: nth($span-margins-bottom, 2);
+            font-size: nth($span-font-sizes, 2);
+            line-height: nth($span-line-height, 2);
+        }
+        @include breakpoint($tablet) {
+            margin-bottom: nth($span-margins-bottom, 3);
+            font-size: nth($span-font-sizes, 3);
+            line-height: nth($span-line-height, 3);
+        }
+        @include breakpoint($phone) {
+            margin-bottom: nth($span-margins-bottom, 4);
+            font-size: nth($span-font-sizes, 4);
+            line-height: nth($span-line-height, 4);
+        }
+    }
+}
+
+// Mixin for generateing link style
+@mixin generate-link-styles {
+    a {
+        margin-bottom: nth($link-margins-bottom, 1);
+        text-decoration: none;
+        font-size: nth($link-font-sizes, 1);
+        font-family: $body-font;
+        font-weight: $regular;
+        line-height: nth($link-line-height, 1);
+        color: $link-color;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $link-hover-color;
+            cursor: pointer;
+        }
+        @include breakpoint($desktop) {
+            margin-bottom: nth($link-margins-bottom, 2);
+            font-size: nth($link-font-sizes, 2);
+            line-height: nth($link-line-height, 2);
+        }
+        @include breakpoint($tablet) {
+            margin-bottom: nth($link-margins-bottom, 3);
+            font-size: nth($link-font-sizes, 3);
+            line-height: nth($link-line-height, 3);
+        }
+        @include breakpoint($phone) {
+            margin-bottom: nth($link-margins-bottom, 4);
+            font-size: nth($link-font-sizes, 4);
+            line-height: nth($link-line-height, 4);
+        }
+    }
+}

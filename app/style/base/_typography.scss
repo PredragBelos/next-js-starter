@@ -1,0 +1,13 @@
+// Creating all heading styles
+@each $level, $styles in $heading-styles {
+    @include generate-heading-styles($level, $styles);
+}
+
+// Creating paragraph style
+@include generate-paragraph-styles;
+
+// Creating span style
+@include generate-span-styles;
+
+// Creating link style
+@include generate-link-styles;

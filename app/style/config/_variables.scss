@@ -1,0 +1,170 @@
+// Fonts
+$heading-font: "PlayfairDisplay", sans-serif;
+$body-font: "Lato", sans-serif;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// Colors
+$header-bg-color: #000000;
+$header-text-color: #ffffff;
+$white: #ffffff;
+$black: #000000;
+$button-bg-color: #ffd700;
+$button-bg-hover-color: #ebc700;
+$button-text-color: #000000;
+
+// Required color variables
+$body-text-color: #333333;
+$heading-1-color: #333333;
+$heading-2-color: #333333;
+$heading-3-color: #333333;
+$heading-4-color: #333333;
+$heading-5-color: #333333;
+$heading-6-color: #333333;
+$link-color: #d3bd53;
+$link-hover-color: #e3cb59;
+
+// Breakpoints
+$desktop-plus: "desktop+";
+$desktop: "desktop";
+$laptop: "laptop";
+$tablet-plus: "tablet+";
+$tablet: "tablet";
+$phone-plus: "phone+";
+$phone: "phone";
+
+// Headings
+$heading-1-font-sizes: 32px, 28px, 24px, 20px;
+$heading-1-margins-bottom: 20px, 20px, 15px, 12px;
+$heading-1-line-height: 1.2, 1.2, 1.2, 1.2;
+$heading-2-font-sizes: 28px, 24px, 20px, 18px;
+$heading-2-margins-bottom: 20px, 20px, 14px, 10px;
+$heading-2-line-height: 1.2, 1.2, 1.2, 1.2;
+$heading-3-font-sizes: 24px, 20px, 18px, 16px;
+$heading-3-margins-bottom: 20px, 20px, 12px, 8px;
+$heading-3-line-height: 1.2, 1.2, 1.2, 1.2;
+$heading-4-font-sizes: 20px, 18px, 16px, 14px;
+$heading-4-margins-bottom: 20px, 20px, 10px, 6px;
+$heading-4-line-height: 1.2, 1.2, 1.2, 1.2;
+$heading-5-font-sizes: 18px, 16px, 14px, 12px;
+$heading-5-margins-bottom: 20px, 20px, 8px, 5px;
+$heading-5-line-height: 1.2, 1.2, 1.2, 1.2;
+$heading-6-font-sizes: 16px, 14px, 12px, 10px;
+$heading-6-margins-bottom: 20px, 20px, 6px, 4px;
+$heading-6-line-height: 1.2, 1.2, 1.2, 1.2;
+
+$heading-styles: (
+    h1: (
+        $heading-1-color,
+        nth($heading-1-font-sizes, 1),
+        nth($heading-1-font-sizes, 2),
+        nth($heading-1-font-sizes, 3),
+        nth($heading-1-font-sizes, 4),
+        nth($heading-1-margins-bottom, 1),
+        nth($heading-1-margins-bottom, 2),
+        nth($heading-1-margins-bottom, 3),
+        nth($heading-1-margins-bottom, 4),
+        nth($heading-1-line-height, 1),
+        nth($heading-1-line-height, 2),
+        nth($heading-1-line-height, 3),
+        nth($heading-1-line-height, 4)
+    ),
+    h2: (
+        $heading-2-color,
+        nth($heading-2-font-sizes, 1),
+        nth($heading-2-font-sizes, 2),
+        nth($heading-2-font-sizes, 3),
+        nth($heading-2-font-sizes, 4),
+        nth($heading-2-margins-bottom, 1),
+        nth($heading-2-margins-bottom, 2),
+        nth($heading-2-margins-bottom, 3),
+        nth($heading-2-margins-bottom, 4),
+        nth($heading-2-line-height, 1),
+        nth($heading-2-line-height, 2),
+        nth($heading-2-line-height, 3),
+        nth($heading-2-line-height, 4)
+    ),
+    h3: (
+        $heading-3-color,
+        nth($heading-3-font-sizes, 1),
+        nth($heading-3-font-sizes, 2),
+        nth($heading-3-font-sizes, 3),
+        nth($heading-3-font-sizes, 4),
+        nth($heading-3-margins-bottom, 1),
+        nth($heading-3-margins-bottom, 2),
+        nth($heading-3-margins-bottom, 3),
+        nth($heading-3-margins-bottom, 4),
+        nth($heading-3-line-height, 1),
+        nth($heading-3-line-height, 2),
+        nth($heading-3-line-height, 3),
+        nth($heading-3-line-height, 4)
+    ),
+    h4: (
+        $heading-4-color,
+        nth($heading-4-font-sizes, 1),
+        nth($heading-4-font-sizes, 2),
+        nth($heading-4-font-sizes, 3),
+        nth($heading-4-font-sizes, 4),
+        nth($heading-4-margins-bottom, 1),
+        nth($heading-4-margins-bottom, 2),
+        nth($heading-4-margins-bottom, 3),
+        nth($heading-4-margins-bottom, 4),
+        nth($heading-4-line-height, 1),
+        nth($heading-4-line-height, 2),
+        nth($heading-4-line-height, 3),
+        nth($heading-4-line-height, 4)
+    ),
+    h5: (
+        $heading-5-color,
+        nth($heading-5-font-sizes, 1),
+        nth($heading-5-font-sizes, 2),
+        nth($heading-5-font-sizes, 3),
+        nth($heading-5-font-sizes, 4),
+        nth($heading-5-margins-bottom, 1),
+        nth($heading-5-margins-bottom, 2),
+        nth($heading-5-margins-bottom, 3),
+        nth($heading-5-margins-bottom, 4),
+        nth($heading-5-line-height, 1),
+        nth($heading-5-line-height, 2),
+        nth($heading-5-line-height, 3),
+        nth($heading-5-line-height, 4)
+    ),
+    h6: (
+        $heading-6-color,
+        nth($heading-6-font-sizes, 1),
+        nth($heading-6-font-sizes, 2),
+        nth($heading-6-font-sizes, 3),
+        nth($heading-6-font-sizes, 4),
+        nth($heading-6-margins-bottom, 1),
+        nth($heading-6-margins-bottom, 2),
+        nth($heading-6-margins-bottom, 3),
+        nth($heading-6-margins-bottom, 4),
+        nth($heading-6-line-height, 1),
+        nth($heading-6-line-height, 2),
+        nth($heading-6-line-height, 3),
+        nth($heading-6-line-height, 4)
+    )
+);
+
+// Paragraphs
+$paragraph-font-sizes: 16px, 16px, 14px, 12px;
+$paragraph-margins-bottom: 20px, 20px, 18px, 16px;
+$paragraph-line-height: 1.6, 1.6, 1.6, 1.5;
+
+// Spans
+$span-font-sizes: 16px, 16px, 14px, 12px;
+$span-margins-bottom: 20px, 20px, 18px, 16px;
+$span-line-height: 1.6, 1.6, 1.6, 1.5;
+
+// Links
+$link-font-sizes: 16px, 16px, 14px, 12px;
+$link-margins-bottom: 20px, 20px, 18px, 16px;
+$link-line-height: 1.6, 1.6, 1.6, 1.5;
+
+// Fonts
+$fonts-src: "../../../public/fonts/";
+$fonts-familys: "PlayfairDisplay", "Lato";
+$font-weights: 400, 500, 600, 700;
+$font-formats: "woff2", "woff", "truetype";

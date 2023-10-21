@@ -1,3 +1,6 @@
+The best way to start with this template is using 
+npx create-next-app [APP NAME] -e https://github.com/PredragBelos/next-js-starter
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
